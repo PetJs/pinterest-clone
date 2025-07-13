@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.food-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    padding: 18px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e60023;
+}
+
+.logo::before {
+    content: "📌";
+    font-size: 24px;
+}
+
+.explore {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #757070;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #757070;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login {
+    background: #e60023;
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-login:hover {
+    background: #d50000;
+}
+
+.btn-signup {
+    background: #efefef;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-signup:hover {
+    background: #ddd;
+}
+
+/* Main Content */
+main {
+    background: url('../img/hero-image.webp') center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 20px;
+    position: relative;
+}
+
+.blur{
+    width: 100%;
+    height: 100%;
+    background: #0000009f;
+    position: absolute;
+}
+
+.container {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 100px;
+}
+
+/* Left side - Hero text */
+.hero-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+.hero-subtext {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+/* Right side - Login form */
+.login-section {
+    flex: 0 0 450px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #767676;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #0074d9;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.forgot-password {
+    display: block;
+    text-align: left;
+    color: #0074d9;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    background: #e60023;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #d50000;
+}
+
+.divider {
+    text-align: center;
+    color: #767676;
+    margin: 2px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.facebook-btn {
+    width: 100%;
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.facebook-btn:hover {
+    background: #166fe5;
+}
+
+.facebook-btn::before {
+    content: "f";
+    background: white;
+    color: #1877f2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.google-option {
+    width: 100%;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.google-option:hover {
+    background: #ececec;
+}
+
+.google-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #4285f4, #34a853, #fbbc05, #ea4335);
+    border-radius: 50%;
+}
+
+.google-info h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.google-info p {
+    font-size: 11px;
+    color: #767676;
+}
+
+.google-arrow {
+    color: #999;
+    font-size: 18px;
+}
+
+.terms {
+    font-size: 11px;
+    color: #767676;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.terms a {
+    color: #0074d9;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.signup-link a {
+    color: #0074d9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.business-link {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.business-link a {
+    color: #0074d9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.business-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-text,
+    .hero-subtext {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .login-section {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .header-right nav {
+        display: none;
+    }
+}
+
+/* → Container & Header */
+.inspiration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fafafa;
+    height: 100vh;
+}
+
+.inspiration-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+}
+.inspiration-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #555;
+}
+.highlight-text {
+    font-size: 2.25rem;
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0.25rem;
+}
+
+/* → Dots Navigation */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.dot.active,
+.dot:hover {
+    background: var(--accent);
+}
+
+/* → Photo Grid */
+.inspiration-content {
+    display: flex;
+}
+/* 1) Make each grid a horizontal carousel */
+.image-grid {
+    width: 100%;
+    display: flex;
+    gap: 1rem;        
+}
+
+/* 2) Center each card when snapped */
+.image-grid img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.image4{
+    position: absolute;
+    right: 0;
+}
+
+.image1{
+    position: absolute;
+    left: 12px;
+}
+
+.image2{
+    position: absolute;
+    bottom: 17px;
+    left: 25%;
+    background: #000;
+}
+
+.image3{
+    position: absolute;
+    bottom: 12px;
+}
+
+.image-grid img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Left gradient */
+.inspiration-content::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 4rem;
+    pointer-events: none;
+    background: linear-gradient(to right, #fafafa 0%, rgba(250,250,250,0) 100%);
+    z-index: 1;
+}
+
+/* Right gradient */
+.inspiration-content::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 4rem;
+    pointer-events: none;
+    background: linear-gradient(to left, #fafafa 0%, rgba(250,250,250,0) 100%);
+    z-index: 1;
+} 
+
+/* 4) Only show the active grid */
+.image-grid { display: none; }
+.image-grid.active { display: flex; }
+
+.search-section {
+    background: #fff59d;
+    padding: 4rem 1rem;
+    height: 100vh;
+}
+
+.search-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* — LEFT: STACKED CARDS — */
+.image-stack {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* base card styling */
+.image-stack .card {
+    position: absolute;
+    margin-top: 70px;
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* each card offset */
+.image-stack .card-1 {
+    top: 0;
+    width: 300px;
+    height: 450px;
+    left: 40%;
+    z-index: 4;
+}
+.image-stack .card-2 {
+    top: 30px;
+    left: -20px;
+    z-index: 3;
+}
+.image-stack .card-3 {
+    top: -60px;
+    left: 75%;
+    z-index: 2;
+}
+.image-stack .card-4 {
+    bottom: -80%;
+    left: 120%;
+    z-index: 1;
+}
+
+/* card images fill */
+.image-stack .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* search label overlay */
+.image-stack .search-label {
+    position: absolute;
+    z-index: 5;
+    bottom: 20px;
+    width: 300px;
+    left: 60%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.9);
+    padding: 1.3rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.image-stack .search-label .search-icon {
+    font-size: 1.2rem;
+}
+
+/* — RIGHT: COPY & BUTTON — */
+.search-copy {
+    max-width: 500px;
+}
+.search-copy h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+    color: #881337;
+}
+.search-copy p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #881337;
+}
+.btn-explore {
+    background: #e60023;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-explore:hover {
+    background: #c5001f;
+}
+
+.ideas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(135, 235, 218);
+    height: 100vh;
+}
+
+.idea-content{
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.idea-header{
+    font-size: 45px;
+    color: green;
+}
+
+.idea-text{
+    color: greenyellow;
+    line-break: 2;
+}
+
+.idea-catalogue{
+    position: relative;
+    display: flex;
+    width: 90%;
+}
+
+.idea-catalogue1{
+    width: 5100px;
+    height: 250px;
+    position: relative;
+    background-color: red;
+    display: flex;
+}
+
+.idea-catalogue2, .idea-catalogue3, .idea-catalogue4, .idea-catalogue5{
+    width: 32px;
+}

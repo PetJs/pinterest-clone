@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pinterest</title>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">Pinterest</div>
+            <div class="explore">Explore</div>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Businesses</a>
+                <a href="#">Create</a>
+                <a href="#">News</a>
+            </nav>
+            <div class="header-buttons">
+                <button class="btn-login">Log in</button>
+                <button class="btn-signup">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="blur"></div>
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="hero-text">Log in to get</h1>
+                <h1 class="hero-subtext">your ideas</h1>
+            </div>
+
+            <div class="login-section">
+                <h2 class="login-title">Welcome to<br>Pinterest</h2>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+
+                    <button type="submit" class="login-btn">Log in</button>
+
+                    <div class="divider">OR</div>
+
+                    <button type="button" class="facebook-btn">Continue with Facebook</button>
+
+                    <div class="google-option">
+                        <div class="google-left">
+                            <div class="google-icon"></div>
+                            <div class="google-info">
+                                <h4>Continue as fagorove</h4>
+                                <p>petersfagorove76@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="google-arrow">→</div>
+                    </div>
+
+                    <div class="terms">
+                        By continuing, you agree to Pinterest's <a href="#">Terms of Service</a> and acknowledge you've read our <a href="#">Privacy Policy</a>. <a href="#">Notice at collection</a>.
+                    </div>
+
+                    <div class="signup-link">
+                        Not on Pinterest yet? <a href="#">Sign up</a>
+                    </div>
+
+                    <div class="business-link">
+                        Are you a business? <a href="#">Get started here!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <section id="inspiration" class="inspiration">
+        <div class="inspiration-header"></div>
+            <h2>Get your next</h2>
+            <h2 class="highlight-text">Big Idea</h2>
+        </div>
+        
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="inspiration-content">
+            <div class="image-grid active" data-index="0">
+                <img src="pinterest_images/image_0.jpg" alt="" class="image1">
+                <img src="pinterest_images/image_1.jpg" alt="" class="image2">
+                <img src="pinterest_images/image_2.jpg" alt="" class="image3">
+                <img src="pinterest_images/image_3.jpg" alt="" class="image4">
+            </div>
+            <div class="image-grid" data-index="1">
+                <img src="pinterest_images/image_70.jpg" alt="" class="image1">
+                <img src="pinterest_images/image_71.jpg" alt="" class="image2">
+                <img src="pinterest_images/image_72.jpg" alt="" class="image3">
+                <img src="pinterest_images/image_73.jpg" alt="" class="image4">
+            </div>
+            <div class="image-grid" data-index="2">
+                <img src="pinterest_images/image_105.jpg" alt="" class="image1">
+                <img src="pinterest_images/image_110.jpg" alt="" class="image2">
+                <img src="pinterest_images/image_112.jpg" alt="" class="image3">
+                <img src="pinterest_images/image_120.jpg" alt="" class="image4">
+            </div>
+            <div class="image-grid" data-index="3">
+                <img src="pinterest_images/image_141.jpg" alt="" class="image1" >
+                <img src="pinterest_images/image_142.jpg" alt="" class="image2">
+                <img src="pinterest_images/image_145.jpg" alt="" class="image3">
+                <img src="pinterest_images/image_147.jpg" alt="" class="image4">
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="search-wrapper">
+            <div>
+               <div class="image-stack">
+                    <div class="card card-1">
+                        <img src="pinterest_images/image_5.jpg" alt="Dish 1">
+                    </div>
+                    <div class="card card-2">
+                        <img src="pinterest_images/image_7.jpg" alt="Dish 2">
+                    </div>
+                    <div class="card card-3">
+                        <img src="pinterest_images/image_10.jpg" alt="Dish 3">
+                    </div>
+                    <div class="card card-4">
+                        <img src="pinterest_images/image_15.jpg" alt="Dish 4">
+                    </div>
+                    <div class="search-label">
+                        <span class="search-icon">🔍</span>
+                        <span>easy chicken dinner</span>
+                    </div>
+                </div> 
+            </div>
+            
+
+            <div>
+                <div class="search-copy">
+                <h2>Search for an idea</h2>
+                <p>
+                    What do you want to try next? Think of something you’re into—like
+                    “easy chicken dinner”—and see what you find.
+                </p>
+                <button class="btn-explore">Explore</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="ideas" class="ideas">
+        <div class="idea-content">
+            <h2 class="idea-header">Save Ideas you like</h2>
+
+            <p class="idea-text">Collect your favourites so you can get back to them later</p>
+
+            <button class="btn-login">Explore</button>
+        </div>
+
+        <div class="idea-catalogue">
+            <div class="idea-catalogue1">
+                <img src="pinterest_images/image_179.jpg"" alt="">
+                <div>
+                    <h2>Fern future home vibes</h2>
+                    <div>
+                        <img src="pinterest_images/image_180.jpg" alt="">
+                        <img src="pinterest_images/image_181.jpg" alt="">
+                        <img src="pinterest_images/image_182.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="idea-catalogue2">
+                <img src="pinterest_images/image_183.jpg" alt="">
+                <p>My Scandinavian bedroom</p>
+            </div>
+
+            <div class="idea-catalogue3">
+                <img src="pinterest_images/image_184.jpg" alt="">
+                <p>The deck of my dreams</p>
+            </div>
+
+            <div class="idea-catalogue4">
+                <img src="pinterest_images/image_186.jpg" alt="">
+                <p>Serve my dreams in Cup</p>
+            </div>
+
+            <div class="idea-catalogue5">
+                <img src="pinterest_images/image_185.jpg" alt="">
+                <p> Our mirror</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
